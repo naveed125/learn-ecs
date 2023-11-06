@@ -32,8 +32,7 @@ TODO
 ```
 
 * Create ECS Task file
-* Configure ECS cluster
-* Configure ECS cluster to use the AWS EC2 instance
+* Create ECS cluster and configure ECS cluster to use the AWS EC2 instance
 * Create ECS Service and Loadbalancer
 * Setup DNS to use the new LB
 * Setup Database using RDS
