@@ -18,11 +18,11 @@ docker login --username AWS --password-stdin <aws account>.dkr.ecr.<aws region>.
 
 * Build and push docker image to ecr
 ```
-docker build -t project:latest .
+docker build -t <project>:latest .
 
-docker tag project:latest <aws account>.dkr.ecr.<aws region>.amazonaws.com/project:latest
+docker tag <project>:latest <aws account>.dkr.ecr.<aws region>.amazonaws.com/<project>:latest
 
-docker push <aws account>.dkr.ecr.<aws region>.amazonaws.com/project:latest
+docker push <aws account>.dkr.ecr.<aws region>.amazonaws.com/<project>:latest
 ```
 
 * Setup EC2 Instance
