@@ -26,11 +26,7 @@ docker push <aws account>.dkr.ecr.<aws region>.amazonaws.com/<project>:latest
 ```
 
 * Setup EC2 Instance
-* Install ECS agent
-```
-TODO
-```
-
+* Install ECS agent using [this guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-install.html).
 * Create ECS Task file
 * Create ECS cluster and configure ECS cluster to use the AWS EC2 instance
 * Create ECS Service and Loadbalancer
