@@ -1,0 +1,39 @@
+{
+    "family": "ecs-task",
+    "taskRoleArn": "arn:aws:iam::<your aws id>:role/ecsTaskRole",
+    "executionRoleArn": "arn:aws:iam::<your aws id>:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "containerDefinitions": [
+        {
+            "name": "<app>",
+            "image": "<your aws id>.dkr.ecr.<your aws region>.amazonaws.com/<app>:latest",
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "ENVIRONMENT",
+                    "value": "production"
+                }
+            ],
+            "startTimeout": 300,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/logs/<app>",
+                    "awslogs-region": "<region>",
+                    "awslogs-stream-prefix": "prod"
+                }
+            }
+        }
+    ]
+}

@@ -36,3 +36,11 @@ docker push <aws account>.dkr.ecr.<aws region>.amazonaws.com/<project>:latest
 * Setup Secrets using Secrets Manager
 * Update entrypoints to use `secmgr` utility to fetch credentials at startup.
 * Configure CI/CD pipeline to deploy to service on new commit.
+
+## Using AWS RCS co-pilot (Fargate only)
+```
+Note: Copilot uses AWS Cloudformation
+```
+* Download from https://aws.github.io/copilot-cli/docs/getting-started/install/
+* On Windows I moved it to C:\Program Files\AWS-ECS-Copilot and added that directory to windows path.
+* 
